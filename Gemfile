@@ -132,7 +132,7 @@ group :test, :development do
   gem 'discourse-qunit-rails', require: 'qunit-rails'
   gem 'mocha', require: false
   gem 'rb-fsevent', require: RUBY_PLATFORM =~ /darwin/i ? 'rb-fsevent' : false
-  gem 'rb-inotify', '~> 0.9', require: RUBY_PLATFORM =~ /linux/i ? 'rb-inotify' : false
+  gem 'rb-inotify', '~> 0.9', '>= 0.9.7'
   gem 'rspec-rails', require: false
   gem 'shoulda', require: false
   gem 'rspec-html-matchers'
@@ -168,7 +168,7 @@ gem 'rack-mini-profiler', require: false
 
 gem 'unicorn', require: false
 gem 'puma', require: false
-gem 'rbtrace', require: false, platform: :mri
+gem 'rbtrace', '>= 0.4.8', require: false, platform: :mri
 gem 'gc_tracer', require: false, platform: :mri
 
 # required for feed importing and embedding
