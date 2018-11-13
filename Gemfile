@@ -8,8 +8,8 @@ end
 
 if rails_master?
   gem 'arel', git: 'https://github.com/rails/arel.git'
-  gem 'rails', git: 'https://github.com/rails/rails.git'
-  gem 'seed-fu', git: 'https://github.com/SamSaffron/seed-fu.git', branch: 'discourse'
+  gem 'rails', '4.2.7.1'
+  gem 'seed-fu', '2.3.5'
 else
   # Rails 5 is going to ship with Action Cable, we have no use for it as
   # we already ship MessageBus, AC introduces dependencies on Event Machine,
@@ -52,7 +52,7 @@ gem 'babel-transpiler'
 
 gem 'message_bus'
 
-gem 'rails_multisite'
+gem 'rails_multisite', '>= 1.0.6'
 
 gem 'fast_xs'
 
@@ -97,7 +97,7 @@ gem 'rest-client'
 gem 'rinku'
 gem 'sanitize'
 gem 'sass'
-gem 'sass-rails'
+gem 'sass-rails', '>= 5.0.4'
 gem 'sidekiq'
 gem 'sidekiq-statistic'
 
@@ -129,23 +129,23 @@ group :test, :development do
   gem 'certified', require: false
   # later appears to break Fabricate(:topic, category: category)
   gem 'fabrication', '2.9.8', require: false
-  gem 'discourse-qunit-rails', require: 'qunit-rails'
+  gem 'discourse-qunit-rails', '0.0.9'
   gem 'mocha', require: false
   gem 'rb-fsevent', require: RUBY_PLATFORM =~ /darwin/i ? 'rb-fsevent' : false
   gem 'rb-inotify', '~> 0.9', require: RUBY_PLATFORM =~ /linux/i ? 'rb-inotify' : false
-  gem 'rspec-rails', require: false
-  gem 'shoulda', require: false
+  gem 'rspec-rails', '>= 3.4.2', require: false
+  gem 'shoulda', '>= 3.5.0', require: false
   gem 'rspec-html-matchers'
-  gem 'spork-rails'
+  gem 'spork-rails', '>= 4.0.0'
   gem 'pry-nav'
   gem 'byebug', require: ENV['RM_INFO'].nil?
 end
 
 group :development do
-  gem 'bullet', require: !!ENV['BULLET']
+  gem 'bullet', '>= 5.4.2'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'annotate'
+  gem 'annotate', '>= 2.7.1'
   gem 'foreman', require: false
 end
 
