@@ -40,7 +40,7 @@ gem 'redis-namespace'
 
 gem 'active_model_serializers', '~> 0.8.3'
 
-gem 'onebox'
+gem 'onebox', '>= 1.7.8'
 
 gem 'http_accept_language', '~>2.0.5', require: false
 
@@ -95,7 +95,7 @@ gem 'rake'
 
 gem 'rest-client'
 gem 'rinku'
-gem 'sanitize'
+gem 'sanitize', '>= 5.2.1'
 gem 'sass'
 gem 'sass-rails'
 gem 'sidekiq'
