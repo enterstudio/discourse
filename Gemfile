@@ -8,7 +8,7 @@ end
 
 if rails_master?
   gem 'arel', git: 'https://github.com/rails/arel.git'
-  gem 'rails', git: 'https://github.com/rails/rails.git'
+  gem 'rails', '>= 4.2.7.1', git: 'https://github.com/rails/rails.git'
   gem 'seed-fu', git: 'https://github.com/SamSaffron/seed-fu.git', branch: 'discourse'
 else
   # Rails 5 is going to ship with Action Cable, we have no use for it as
@@ -27,7 +27,7 @@ else
   # gem 'activejob'
   # gem 'railties'
   # gem 'sprockets-rails'
-  gem 'rails', '~> 4.2'
+  gem 'rails', '~> 4.2', '>= 4.2.7.1'
   gem 'seed-fu', '~> 2.3.5'
 end
 
@@ -40,7 +40,7 @@ gem 'redis-namespace'
 
 gem 'active_model_serializers', '~> 0.8.3'
 
-gem 'onebox'
+gem 'onebox', '>= 1.8.3'
 
 gem 'http_accept_language', '~>2.0.5', require: false
 
@@ -52,7 +52,7 @@ gem 'babel-transpiler'
 
 gem 'message_bus'
 
-gem 'rails_multisite'
+gem 'rails_multisite', '>= 1.0.6'
 
 gem 'fast_xs'
 
@@ -72,7 +72,7 @@ gem 'email_reply_trimmer', '0.1.6'
 gem 'image_optim', '0.20.2'
 gem 'multi_json'
 gem 'mustache'
-gem 'nokogiri'
+gem 'nokogiri', '>= 1.11.0'
 gem 'omniauth'
 gem 'omniauth-openid'
 gem 'openid-redis-store'
@@ -95,9 +95,9 @@ gem 'rake'
 
 gem 'rest-client'
 gem 'rinku'
-gem 'sanitize'
+gem 'sanitize', '>= 4.4.0'
 gem 'sass'
-gem 'sass-rails'
+gem 'sass-rails', '>= 5.0.4'
 gem 'sidekiq'
 gem 'sidekiq-statistic'
 
@@ -129,14 +129,14 @@ group :test, :development do
   gem 'certified', require: false
   # later appears to break Fabricate(:topic, category: category)
   gem 'fabrication', '2.9.8', require: false
-  gem 'discourse-qunit-rails', require: 'qunit-rails'
+  gem 'discourse-qunit-rails', '>= 0.0.9', require: 'qunit-rails'
   gem 'mocha', require: false
   gem 'rb-fsevent', require: RUBY_PLATFORM =~ /darwin/i ? 'rb-fsevent' : false
   gem 'rb-inotify', '~> 0.9', require: RUBY_PLATFORM =~ /linux/i ? 'rb-inotify' : false
-  gem 'rspec-rails', require: false
+  gem 'rspec-rails', '>= 3.4.2', require: false
   gem 'shoulda', require: false
-  gem 'rspec-html-matchers'
-  gem 'spork-rails'
+  gem 'rspec-html-matchers', '>= 0.7.0'
+  gem 'spork-rails', '>= 4.0.0'
   gem 'pry-nav'
   gem 'byebug', require: ENV['RM_INFO'].nil?
 end
@@ -173,7 +173,7 @@ gem 'gc_tracer', require: false, platform: :mri
 
 # required for feed importing and embedding
 #
-gem 'ruby-readability', require: false
+gem 'ruby-readability', '>= 0.7.0', require: false
 gem 'simple-rss', require: false
 
 gem 'stackprof', require: false, platform: :mri
