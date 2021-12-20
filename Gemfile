@@ -50,7 +50,7 @@ gem 'ember-handlebars-template', '0.7.5'
 gem 'barber'
 gem 'babel-transpiler'
 
-gem 'message_bus'
+gem 'message_bus', '>= 3.3.7'
 
 gem 'rails_multisite'
 
