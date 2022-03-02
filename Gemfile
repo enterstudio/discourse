@@ -8,7 +8,7 @@ end
 
 if rails_master?
   gem 'arel', git: 'https://github.com/rails/arel.git'
-  gem 'rails', git: 'https://github.com/rails/rails.git'
+  gem 'rails', '>= 5.2.6.2', git: 'https://github.com/rails/rails.git'
   gem 'seed-fu', git: 'https://github.com/SamSaffron/seed-fu.git', branch: 'discourse'
 else
   # Rails 5 is going to ship with Action Cable, we have no use for it as
@@ -27,7 +27,7 @@ else
   # gem 'activejob'
   # gem 'railties'
   # gem 'sprockets-rails'
-  gem 'rails', '~> 4.2'
+  gem 'rails', '~> 5.2', '>= 5.2.6.2'
   gem 'seed-fu', '~> 2.3.5'
 end
 
@@ -40,7 +40,7 @@ gem 'redis-namespace'
 
 gem 'active_model_serializers', '~> 0.8.3'
 
-gem 'onebox'
+gem 'onebox', '>= 1.8.3'
 
 gem 'http_accept_language', '~>2.0.5', require: false
 
@@ -52,7 +52,7 @@ gem 'babel-transpiler'
 
 gem 'message_bus'
 
-gem 'rails_multisite'
+gem 'rails_multisite', '>= 1.1.0'
 
 gem 'fast_xs'
 
@@ -72,7 +72,7 @@ gem 'email_reply_trimmer', '0.1.6'
 gem 'image_optim', '0.20.2'
 gem 'multi_json'
 gem 'mustache'
-gem 'nokogiri'
+gem 'nokogiri', '>= 1.13.2'
 gem 'omniauth'
 gem 'omniauth-openid'
 gem 'openid-redis-store'
@@ -97,7 +97,7 @@ gem 'rest-client'
 gem 'rinku'
 gem 'sanitize'
 gem 'sass'
-gem 'sass-rails'
+gem 'sass-rails', '>= 5.0.5'
 gem 'sidekiq'
 gem 'sidekiq-statistic'
 
@@ -133,7 +133,7 @@ group :test, :development do
   gem 'mocha', require: false
   gem 'rb-fsevent', require: RUBY_PLATFORM =~ /darwin/i ? 'rb-fsevent' : false
   gem 'rb-inotify', '~> 0.9', require: RUBY_PLATFORM =~ /linux/i ? 'rb-inotify' : false
-  gem 'rspec-rails', require: false
+  gem 'rspec-rails', '>= 3.5.0', require: false
   gem 'shoulda', require: false
   gem 'rspec-html-matchers'
   gem 'spork-rails'
@@ -167,7 +167,7 @@ gem 'flamegraph', require: false
 gem 'rack-mini-profiler', require: false
 
 gem 'unicorn', require: false
-gem 'puma', require: false
+gem 'puma', '>= 4.3.11', require: false
 gem 'rbtrace', require: false, platform: :mri
 gem 'gc_tracer', require: false, platform: :mri
 
