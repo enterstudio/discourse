@@ -73,8 +73,8 @@ gem 'image_optim', '0.20.2'
 gem 'multi_json'
 gem 'mustache'
 gem 'nokogiri'
-gem 'omniauth'
-gem 'omniauth-openid'
+gem 'omniauth', '>= 2.0.0'
+gem 'omniauth-openid', '>= 2.0.1'
 gem 'openid-redis-store'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
@@ -83,7 +83,7 @@ gem 'omniauth-instagram'
 # forked while https://github.com/intridea/omniauth-github/pull/41 is being upstreamd
 gem 'omniauth-github-discourse', require: 'omniauth-github'
 
-gem 'omniauth-oauth2', require: false
+gem 'omniauth-oauth2', '>= 1.7.1', require: false
 
 gem 'omniauth-google-oauth2'
 gem 'oj'
