@@ -8,8 +8,8 @@ end
 
 if rails_master?
   gem 'arel', git: 'https://github.com/rails/arel.git'
-  gem 'rails', git: 'https://github.com/rails/rails.git'
-  gem 'seed-fu', git: 'https://github.com/SamSaffron/seed-fu.git', branch: 'discourse'
+  gem 'rails', '>= 6.1.7.3', git: 'https://github.com/rails/rails.git'
+  gem 'seed-fu', '>= 2.3.6', git: 'https://github.com/SamSaffron/seed-fu.git', branch: 'discourse'
 else
   # Rails 5 is going to ship with Action Cable, we have no use for it as
   # we already ship MessageBus, AC introduces dependencies on Event Machine,
@@ -27,8 +27,8 @@ else
   # gem 'activejob'
   # gem 'railties'
   # gem 'sprockets-rails'
-  gem 'rails', '~> 4.2'
-  gem 'seed-fu', '~> 2.3.5'
+  gem 'rails', '~> 6.1', '>= 6.1.7.3'
+  gem 'seed-fu', '~> 2.3.6'
 end
 
 gem 'mail'
@@ -40,7 +40,7 @@ gem 'redis-namespace'
 
 gem 'active_model_serializers', '~> 0.8.3'
 
-gem 'onebox'
+gem 'onebox', '>= 1.8.3'
 
 gem 'http_accept_language', '~>2.0.5', require: false
 
@@ -50,9 +50,9 @@ gem 'ember-handlebars-template', '0.7.5'
 gem 'barber'
 gem 'babel-transpiler'
 
-gem 'message_bus'
+gem 'message_bus', '>= 3.3.7'
 
-gem 'rails_multisite'
+gem 'rails_multisite', '>= 4.0.0'
 
 gem 'fast_xs'
 
@@ -61,7 +61,7 @@ gem 'fast_xor'
 # while we sort out https://github.com/sdsykes/fastimage/pull/46
 gem 'discourse_fastimage', '2.0.3', require: 'fastimage'
 gem 'aws-sdk', require: false
-gem 'excon', require: false
+gem 'excon', '>= 0.71.0', require: false
 gem 'unf', require: false
 
 gem 'email_reply_trimmer', '0.1.6'
@@ -72,9 +72,9 @@ gem 'email_reply_trimmer', '0.1.6'
 gem 'image_optim', '0.20.2'
 gem 'multi_json'
 gem 'mustache'
-gem 'nokogiri'
-gem 'omniauth'
-gem 'omniauth-openid'
+gem 'nokogiri', '>= 1.13.9'
+gem 'omniauth', '>= 2.1.0'
+gem 'omniauth-openid', '>= 2.0.1'
 gem 'openid-redis-store'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
@@ -83,30 +83,30 @@ gem 'omniauth-instagram'
 # forked while https://github.com/intridea/omniauth-github/pull/41 is being upstreamd
 gem 'omniauth-github-discourse', require: 'omniauth-github'
 
-gem 'omniauth-oauth2', require: false
+gem 'omniauth-oauth2', '>= 1.7.1', require: false
 
 gem 'omniauth-google-oauth2'
 gem 'oj'
 gem 'pg'
 gem 'pry-rails', require: false
 gem 'r2', '~> 0.2.5', require: false
-gem 'rake'
+gem 'rake', '>= 12.3.3'
 
 
 gem 'rest-client'
 gem 'rinku'
-gem 'sanitize'
+gem 'sanitize', '>= 5.2.1'
 gem 'sass'
-gem 'sass-rails'
-gem 'sidekiq'
-gem 'sidekiq-statistic'
+gem 'sass-rails', '>= 6.0.0'
+gem 'sidekiq', '>= 6.2.1'
+gem 'sidekiq-statistic', '>= 1.4.0'
 
 # for sidekiq web
-gem 'sinatra', require: false
+gem 'sinatra', '>= 2.2.3', require: false
 gem 'execjs', require: false
 gem 'mini_racer'
 gem 'highline', require: false
-gem 'rack-protection' # security
+gem 'rack-protection' , '>= 2.0.0' # security
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -132,8 +132,8 @@ group :test, :development do
   gem 'discourse-qunit-rails', require: 'qunit-rails'
   gem 'mocha', require: false
   gem 'rb-fsevent', require: RUBY_PLATFORM =~ /darwin/i ? 'rb-fsevent' : false
-  gem 'rb-inotify', '~> 0.9', require: RUBY_PLATFORM =~ /linux/i ? 'rb-inotify' : false
-  gem 'rspec-rails', require: false
+  gem 'rb-inotify', '~> 0.9', '>= 0.9.7', require: RUBY_PLATFORM =~ /linux/i ? 'rb-inotify' : false
+  gem 'rspec-rails', '>= 3.5.0', require: false
   gem 'shoulda', require: false
   gem 'rspec-html-matchers'
   gem 'spork-rails'
@@ -143,9 +143,9 @@ end
 
 group :development do
   gem 'bullet', require: !!ENV['BULLET']
-  gem 'better_errors'
+  gem 'better_errors', '>= 2.8.0'
   gem 'binding_of_caller'
-  gem 'annotate'
+  gem 'annotate', '>= 2.7.5'
   gem 'foreman', require: false
 end
 
@@ -167,7 +167,7 @@ gem 'flamegraph', require: false
 gem 'rack-mini-profiler', require: false
 
 gem 'unicorn', require: false
-gem 'puma', require: false
+gem 'puma', '>= 4.3.12', require: false
 gem 'rbtrace', require: false, platform: :mri
 gem 'gc_tracer', require: false, platform: :mri
 
