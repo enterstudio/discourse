@@ -98,8 +98,8 @@ gem 'rinku'
 gem 'sanitize'
 gem 'sass'
 gem 'sass-rails'
-gem 'sidekiq'
-gem 'sidekiq-statistic'
+gem 'sidekiq', '>= 7.0.8'
+gem 'sidekiq-statistic', '>= 1.4.0'
 
 # for sidekiq web
 gem 'sinatra', require: false
