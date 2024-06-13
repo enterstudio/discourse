@@ -311,7 +311,7 @@ GEM
     rspec-support (3.4.1)
     rtlit (0.0.5)
     ruby-openid (2.7.0)
-    ruby-readability (0.7.0)
+    ruby-readability (0.7.1)
       guess_html_encoding (>= 0.0.4)
       nokogiri (>= 1.6.0)
     sanitize (4.4.0)
@@ -458,7 +458,7 @@ DEPENDENCIES
   rspec-html-matchers
   rspec-rails
   rtlit
-  ruby-readability
+  ruby-readability (>= 0.7.1)
   sanitize
   sass
   sass-rails
@@ -476,4 +476,4 @@ DEPENDENCIES
   unicorn
 
 BUNDLED WITH
-   1.13.7
+   1.17.3
