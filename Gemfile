@@ -76,16 +76,16 @@ gem 'nokogiri'
 gem 'omniauth'
 gem 'omniauth-openid'
 gem 'openid-redis-store'
-gem 'omniauth-facebook'
+gem 'omniauth-facebook', '>= 4.0.0'
 gem 'omniauth-twitter'
-gem 'omniauth-instagram'
+gem 'omniauth-instagram', '>= 1.1.0'
 
 # forked while https://github.com/intridea/omniauth-github/pull/41 is being upstreamd
 gem 'omniauth-github-discourse', require: 'omniauth-github'
 
-gem 'omniauth-oauth2', require: false
+gem 'omniauth-oauth2', '>= 1.4.0', require: false
 
-gem 'omniauth-google-oauth2'
+gem 'omniauth-google-oauth2', '>= 0.4.0'
 gem 'oj'
 gem 'pg'
 gem 'pry-rails', require: false
